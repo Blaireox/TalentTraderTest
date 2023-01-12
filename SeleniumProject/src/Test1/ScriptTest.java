@@ -6,22 +6,23 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ScriptTest {
 
 	public static void main(String[] args) {
 		//INPUT EMAIL HERE//
-		String username = "emailhere";
+		String username = "leechenmingblaire1@gmail.com";
 		//INPUT password HERE//
-		String password = "password here";
+		String password = "Garetta01";
 //code
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\cps3-\\Downloads\\chromedriverCM\\chromedriver.exe");
+		String localDir = System.getProperty("user.dir");
+		String externalFolder = localDir + "\\Externals";
+		String chromedriverpath = externalFolder + "\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", chromedriverpath);
 		WebDriver driver= new ChromeDriver();
 		driver.get("https://todo-list-login.firebaseapp.com/#!/home");
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-		String mainwindow=driver.getWindowHandle();
 		driver.findElement(By.linkText("Sign in with github")).click();
 		Set<String> handles = driver.getWindowHandles();
 		Iterator it = handles.iterator();
