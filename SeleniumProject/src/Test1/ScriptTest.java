@@ -12,9 +12,9 @@ public class ScriptTest {
 
 	public static void main(String[] args) {
 		//INPUT EMAIL HERE//
-		String username = "leechenmingblaire1@gmail.com";
+		String username = "user";
 		//INPUT password HERE//
-		String password = "Garetta01";
+		String password = "pass";
 //code
 		String localDir = System.getProperty("user.dir");
 		String externalFolder = localDir + "\\Externals";
